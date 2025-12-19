@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { HashRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
@@ -15,20 +15,23 @@ import ScrollToTop from './components/ui/ScrollToTop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-pop-cream overflow-x-hidden selection:bg-pop-pink selection:text-white">
-      <Navbar />
-      <Hero />
-      <Marquee />
-      <Introduction />
-      <AIAudit />
-      <Services />
-      <Work />
-      <Banner />
-      <Testimonials />
-      <BlogSection />
-      <Footer />
-      <ScrollToTop />
-    </div>
+    // ⚠️ HashRouter guarantees the site loads on GitHub Pages
+    <HashRouter>
+      <div className="min-h-screen bg-pop-cream overflow-x-hidden selection:bg-pop-pink selection:text-white">
+        <Navbar />
+        <Hero />
+        <Marquee />
+        <Introduction />
+        <AIAudit />
+        <Services />
+        <Work />
+        <Banner />
+        <Testimonials />
+        <BlogSection />
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </HashRouter>
   );
 }
 
